@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авто Сервис Петров | Професионално Одржување Возила</title>
+  <style>
+    /* Ресет и основни стилови */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #f8fafc;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Навигација */
+    header {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #e11d48;
+    }
+    .logo span {
+      color: #ffffff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e11d48;
+    }
+
+    /* Главен Banner (Hero Section) */
+    .hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                  url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: #ffffff;
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #e11d48;
+      color: #ffffff;
+      padding: 0.875rem 1.75rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #be123c;
+    }
+
+    /* Услуги */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      color: #0f172a;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid #e11d48;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+    .card p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* Информации и Контакт */
+    .info-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .info-block h3 {
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+    .info-block ul {
+      list-style: none;
+    }
+    .info-block li {
+      margin-bottom: 0.75rem;
+      color: #475569;
+    }
+
+    /* Футер */
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    /* Респонзивно прилагодување за мобилни */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигација -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">АВТО СЕРВИС <span>ПЕТРОВ</span></div>
+      <nav>
+        <a href="#home">Почетна</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Главна Секција -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Брз, Сигурен и Професионален Авто Сервис</h1>
+      <p>Комплетна авто-дијагностика, механичарски услуги и редовно одржување за сите марки на возила.</p>
+      <a href="tel:070123456" class="btn">📞 Закажи Термин: 070 123 456</a>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section class="section" id="services">
+    <h2 class="section-title">Наши Услуги</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>🔧 Компјутерска Дијагностика</h3>
+        <p>Прецизно дефлектирање и пронаоѓање дефекти на сите електронски и механички системи.</p>
+      </div>
+      <div class="card">
+        <h3>🛢️ Мал и Голем Сервис</h3>
+        <p>Замена на уље, сите видови филтри, ребрасти и клинчести каиши, и затегачи.</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ Кочници и Суспензија</h3>
+        <p>Замена на плочки, дискови, амортизери, затегачи и сервис на управувачки систем.</p>
+      </div>
+      <div class="card">
+        <h3>🚗 Поправка на Мотори</h3>
+        <p>Генерални и делумни поправки на бензински и дизел мотори со квалитетни делови.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакт и Работно Време -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Контакт и Локација</h2>
+    <div class="info-container">
+      <div class="info-block">
+        <h3>Информации за Контакт</h3>
+        <ul>
+          <li><strong>📍 Адреса:</strong> Ул. Индустриска бр. 15, Скопје</li>
+          <li><strong>📞 Телефон:</strong> <a href="tel:070123456" style="color: #e11d48; font-weight: bold;">070 123 456</a></li>
+          <li><strong>✉️ Е-пошта:</strong> info@avtoservispetrov.com</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>Работно Време</h3>
+        <ul>
+          <li><strong>Понеделник - Петок:</strong> 08:00 - 17:00</li>
+          <li><strong>Сабота:</strong> 08:00 - 14:00</li>
+          <li><strong>Недела:</strong> Не работиме</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>&copy; 2026 Авто Сервис Петров. Сите права се задржани.</p>
+  </footer>
+
+</body>
+</html>
